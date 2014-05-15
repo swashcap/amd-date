@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/swashcap/amd-date/issues"
   },
-  "homepage": "https://github.com/swashcap/amd-date"
+  "homepage": "https://github.com/swashcap/amd-date",
+  "dependencies": {
+    "underscore": "^1.6.0"
+  }
 }
