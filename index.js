@@ -1,5 +1,5 @@
 /* global define */
-define(function() {
+define(['underscore'], function(_) {
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   var MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -23,9 +23,12 @@ define(function() {
    * @return str Formatted date string
    */
   function formatDate(date, format) {
-    if ( ! date instanceof Date) {
+    if ( ! date) {
+      var date = new Date();
+    } else if ( ! (date instanceof Date)) {
       var date = new Date(date);
     }
+
     if (! format) {
       // Default format (YYYY MM DD)
       var format = '%Y %m %d';
@@ -109,14 +112,12 @@ define(function() {
 
     if (matches.length) {
       for (var i = 0; i < matches.length; i++) {
-        format.replace(matches[i], formatFunctions[matches[i]](date));
+        format = format.replace(matches[i], formatFunctions[matches[i]](date));
       }
+
       return format;
     }
-
-    //return 'test'; //DAYS[date.getDay()] + ' ' + ' ' + MONTHS[date.getMonth()] + ' ' + date.getDate();
   };
-
 
   /**
    * Get a month name from its integer.
