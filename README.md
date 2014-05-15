@@ -27,6 +27,24 @@ Use [Ruby-like string-to-time formats](http://rubyinrails.com/2013/09/strftime-f
       // => <h1>May 14 <small>2014<small></h1>
     ```
 
+## Format Reference
+
+* `%H`: Hour (24)
+* `%I`: Hour (12)
+* `%M`: Minutes
+* `%S`: Seconds
+* `%Y`: Year
+* `%m`: Month
+* `%d`: day
+* `%w`: Week day
+* `%a`: Week day name (short)
+* `%A`: Week day name (full)
+* `%b`: Month name (short)
+* `%B`: Month name (full)
+* `%y`: Year (without century)
+* `%Z`: Time zone
+* `%p`: AM/PM
+
 ## ToDos
 
 * Fix `%Z` timezone output
