@@ -1,0 +1,25 @@
+{
+  "name": "amd-date",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/swashcap/amd-date",
+  "authors": [
+    "Cory Reed <swashcap@gmail.com>"
+  ],
+  "description": "AMD-compatible JavaScript date printer",
+  "keywords": [
+    "amd",
+    "date",
+    "time",
+    "format"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
